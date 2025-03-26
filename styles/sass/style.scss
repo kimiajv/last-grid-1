@@ -1,17 +1,23 @@
 .container{
    display: grid;
-   width: 800PX;
+   width: 90%;
+   background-color: bisque;
    margin: 40px auto;
-   grid-template-columns: repeat(2,1fr);
-   grid-template-rows: repeat(2,150px);
    grid-gap: 10px;
-   grid-auto-flow: column;
-   grid-auto-columns: .5fr;
-   //grid-auto-rows: 80px;
+   //grid-template-rows: repeat(2,min-content);
+   //grid-template-columns: min-content 1fr 1fr min-content;
+
+   //grid-template-rows: 80px min-content ;?
+
+   //grid-template-columns: minmax(200px,300px) repeat(3,1fr);//width 90% bashe.
+
+   grid-template-rows: repeat(2, minmax(80px,min-content));
+   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));//implicit
+   grid-auto-rows: 150px;//explicit
 
    &>*{
-    background-color: rgb(102, 21, 21);
-    color: white;
+    background-color: rgb(170, 119, 85);
+    color: rgb(236, 236, 236);
     text-align: center;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
