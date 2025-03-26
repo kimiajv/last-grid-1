@@ -2,30 +2,19 @@
   display: grid;
   width: 800PX;
   margin: 40px auto;
-  grid-gap: 20px;
-  grid-template-areas: "head head head head" "box box box side" "main main main side" "footer footer footer .";
-  grid-template-rows: 100px 200px 400px 100px;
-  grid-template-columns: repeat(3, 1fr) 200px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  grid-gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 0.5fr;
 }
 .container > * {
-  background-color: rgb(255, 163, 76);
+  background-color: rgb(102, 21, 21);
+  color: white;
   text-align: center;
-  padding: 40px;
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
-}
-.container .header {
-  grid-area: head;
-}
-.container .sidebar {
-  grid-area: side;
-}
-.container .main-content {
-  grid-area: main;
-}
-.container .footer {
-  grid-area: footer;
 }
 
 /*# sourceMappingURL=style.css.map */
