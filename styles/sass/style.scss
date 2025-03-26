@@ -1,0 +1,54 @@
+.container{
+   display: grid;
+   width: 800PX;
+   margin: 40px auto;
+//    grid-template-rows: [header-start] 100px [header-end box-start] 200px [box-end main-start] 400px [main-end footer-start] 100px [footer-end];
+//    grid-template-columns: repeat(3,[col-start] 1fr [col-end]) 200px [grid-end];
+   grid-gap: 20px;
+   grid-template-areas: "head head head head"  
+                         "box box box side"
+                         "main main main side"
+                         "footer footer footer .";
+                         //از گرید اریا در سلول های کم مثلا 4 یا 5 تا استفاده میشود.
+   grid-template-rows: 100px 200px 400px 100px;
+   grid-template-columns: repeat(3,1fr) 200px;
+   
+   &>*{
+    background-color: rgb(255, 163, 76);
+    text-align: center;
+    padding: 40px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+   }
+.header{
+    grid-area: head;
+}
+.sidebar{
+    grid-area: side;
+}    
+.main-content{
+    grid-area: main;
+}
+.footer{
+    grid-area: footer;
+}
+
+// .header{
+//     grid-column: col-start 1 / grid-end ;
+//     grid-row: header-start / header-end; 
+// }
+// .sidebar{
+//     grid-column: col-end 3 / grid-end;
+//     grid-row: box-start / main-end;
+// }   
+// .main-content{
+//     grid-column: col-start 1 / col-end 3; //= 1/4
+//     grid-row: main-start / main-end;
+// }
+// .footer{
+//     grid-column: col-start 1 / grid-end;
+//     grid-row: footer-start / footer-end;
+// }
+}
+
